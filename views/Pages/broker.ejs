@@ -1,0 +1,24 @@
+<% layout("/layouts/boilerplate") %>
+
+<h2 style="text-align: center;">Brokers</h2>
+
+<div class="table_card">
+    <table>
+      <tr>
+        <th>name</th>
+        <th>state</th>
+        <th>dist</th>
+        <th>contact</th>
+        <th>email</th>
+      </tr>
+      <% for(let list of listings){ %>
+        <tr>
+          <td><%= list.name %></td>
+          <td><%= list.state %></td>
+          <td><%= list.dist %></td>
+          <td><%= list.phone %></td>
+          <td><%= list.email %></td>
+        </tr>
+        <% } %>
+    </table>
+</div>

@@ -1,0 +1,76 @@
+<% layout("/layouts/boilerplate") %>
+
+
+<div class="farmer_dash">
+  <div class="farmer_info">
+    <h2><%= user.name %></h2>
+    <p><%= user.role %></p>
+    <p><span><i class="fa-solid fa-phone"></i></span><%= user.phone %></p>
+    <p><span><i class="fa-solid fa-envelope"></i></span><%= user.email%></p>
+    <p><span><i class="fa-solid fa-location-dot"></i></span><%= user.dist%> ,<%= user.state%> </p>
+  </div>
+
+  <div class="farmer_cont">
+
+    <a href="/farmer/<%= currUser._id %>/postItem">
+      <div class="farmer_card">
+        <div>
+          <i class="fa-brands fa-pagelines"></i>
+        </div>
+        <div>
+          <h3>Post Item</h3>
+        </div>
+      </div>
+    </a>
+    <a href="/farmer/market">
+      <div class="farmer_card">
+        <div>
+          <i class="fa-solid fa-shop"></i>
+        </div>
+        <div>
+          <h3>Markets</h3>
+        </div>
+      </div>
+    </a>
+    <a href="/farmer/hotels">
+      <div class="farmer_card">
+        <div>
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div>
+          <h3>Hotels</h3>
+        </div>
+      </div>
+    </a>
+    <a href="/farmer/brokers">
+      <div class="farmer_card">
+        <div>
+          <i class="fa-regular fa-user"></i>
+        </div>
+        <div>
+          <h3>Brokers</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <h3 class="h3">Your Items</h3>
+  <div class="Item_cont">
+    <% for(product of user.products){ %>
+    <div class="Item_card " style="margin-left: 40px;">
+      <img src="<%= product.image %>" alt="Card Image" class="card-img">
+      <div class="card-content">
+        <h2 class="card-title"><%= product.name %></h2>
+        <p class="card-text"><%= product.desc %></p>
+        <p class="card-text">Qty - &nbsp;<%= product.quantity %></p>
+        <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> <%= product.price %></p>
+        <p class="card-text"><i class="fa-solid fa-clock"></i><%= product.date %> </p>
+        
+        <form method="POST" action="/dash/<%= user._id %>/deleteitem/<%= product._id %>?_method=DELETE" style="margin-top: 20px ;">
+          <button class="btn btn-primary">delete</button>
+        </form>
+      </div>
+    </div>
+    <% } %>
+  </div>
+</div>

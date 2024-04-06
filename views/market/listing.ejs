@@ -1,0 +1,22 @@
+<% layout("/layouts/boilerplate") %>
+
+<h2 style="text-align: center;">Markets</h2>
+
+<div class="table_card">
+    <table>
+      <tr>
+        <th>name</th>
+        <th>state</th>
+        <th>dist</th>
+        <th>Prices</th>
+      </tr>
+      <% for(let list of listings){ %>
+        <tr>
+          <td><%= list.name %></td>
+          <td><%= list.state %></td>
+          <td><%= list.dist %></td>
+          <td><a href="/farmer/market/<%= list._id %>/marketprices">prices</a></td>
+        </tr>
+        <% } %>
+    </table>
+</div>

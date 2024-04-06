@@ -1,0 +1,192 @@
+<% layout("/layouts/boilerplate") %>
+
+<% layout("/layouts/boilerplate") %>
+
+<h3 class="market_heading"><%= currUser.name %></h3>
+
+<form method="POST" action="/farmer/market/<%= currUser._id%>/updatelisting?_method=PUT">
+  <div class="">
+    <div class="market_container">
+        <h3>अन्नधान्य </h3>
+      <div class="row ">
+        <div class="col">
+          <p>तान्दुऴ</p>
+        </div>
+        <div class="col ">
+          <input type="number" name="market[rice]" value="<%= price.rice %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>गहू </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[gahu]" value="<%= price.gahu %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>बाज्ररी </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[bajri]" value="<%= price.bajri %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>ज्वारी </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[jwari]" value="<%= price.jwari %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>वाटाणा</p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[vatana]" value="<%= price.vatana %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>मसूर</p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[masoore]" value="<%= price.masoore %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>हरभरा </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[harbhara]" value="<%= price.harbhara %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>उडीद</p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[udit]" value="<%= price.udit %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>मका </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[makka]" value="<%= price.makka %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>मूग </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[moong]" value="<%= price.moong %>" class="form-control w-3" placeholder="price">
+        </div>
+      </div>
+    </div>
+
+    <div class="market_container">
+        <h3> फळभाजी</h3>
+        <div class="row mt-4">
+            <div class="col">
+              <p>बटाटा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[batata]" value="<%= price.batata %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>कांदा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[kande]" value="<%= price.kande %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>हि.मिरची </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[mirchi]" value="<%= price.mirchi %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>वांगे</p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[vange]" value="<%= price.vange %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>पालक </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[palak]" value="<%= price.palak %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>मेथी </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[methi]" value="<%= price.methi %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+    </div>
+
+    <div class="market_container">
+        <h3>फळे</h3>
+        <div class="row mt-4">
+            <div class="col">
+              <p>पेरु </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[peru]" value="<%= price.peru %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>आंबा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[amba]" value="<%= price.amba %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>टरबूज </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[tarbuj]" value="<%= price.tarbuj %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>अननस </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[ananas]" value="<%= price.ananas %>" class="form-control w-3" placeholder="price">
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>संञा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[santri]" value="<%= price.santri %>" class="form-control w-3" placeholder="price">
+            </div>
+          </div>
+        </div>
+        <div class="market_container">
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+  </div>
+</form>

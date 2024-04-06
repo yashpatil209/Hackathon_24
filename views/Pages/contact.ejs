@@ -1,0 +1,14 @@
+<% layout("/layouts/boilerplate") %>
+
+<div class="contact_container" style="margin: 100px;">
+    <img src="https://res.cloudinary.com/dolej50tb/image/upload/v1708701095/portfolio/contact1_pcurmu.avif" alt="" style="background: transparent;">
+    <form action="https://api.web3forms.com/submit" method="POST" class="contact_form">
+        <h2 style="color: rgb(255, 255, 255);">Get in tounch</h2>
+        <input type="hidden" name="access_key" value="1df6626e-8cd4-4de3-8dcb-48b8a75b6b05">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email id" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Message" required></textarea><br>
+        <button type="submit" class="form_btn">Submit Form</button>
+    </form>
+</div>

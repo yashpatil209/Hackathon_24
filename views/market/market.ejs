@@ -1,0 +1,211 @@
+<% layout("/layouts/boilerplate") %>
+
+<h3 class="market_heading"><%= currUser.name %></h3>
+
+<form method="post" class="needs-validation" novalidate action="/farmer/market/<%= currUser._id%>">
+  <div class="">
+    <div class="market_container">
+        <h3>अन्नधान्य </h3>
+      <div class="row ">
+        <div class="col">
+          <p>तान्दुऴ</p>
+        </div>
+        <div class="col ">
+          <input type="number" name="market[rice]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>गहू </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[gahu]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>बाज्ररी </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[bajri]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>ज्वारी </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[jwari]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>वाटाणा</p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[vatana]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>मसूर</p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[masoore]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>हरभरा </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[harbhara]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>उडीद</p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[udit]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>मका </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[makka]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+      <div class="row mt-4">
+        <div class="col">
+          <p>मूग </p>
+        </div>
+        <div class="col">
+          <input type="number" name="market[moong]" class="form-control w-3" placeholder="price" required>
+          <div class="invalid-feedback"> please enter price! </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="market_container">
+        <h3> फळभाजी</h3>
+        <div class="row mt-4">
+            <div class="col">
+              <p>बटाटा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[batata]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>कांदा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[kande]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>हि.मिरची </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[mirchi]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>वांगे</p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[vange]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>पालक </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[palak]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>मेथी </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[methi]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="market_container">
+        <h3>फळे</h3>
+        <div class="row mt-4">
+            <div class="col">
+              <p>पेरु </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[peru]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>आंबा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[amba]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>टरबूज </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[tarbuj]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>अननस </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[ananas]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+              <p>संञा </p>
+            </div>
+            <div class="col">
+              <input type="number" name="market[santri]" class="form-control w-3" placeholder="price" required>
+              <div class="invalid-feedback"> please enter price! </div>
+            </div>
+          </div>
+        </div>
+        <div class="market_container">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+  </div>
+</form>

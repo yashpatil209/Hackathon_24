@@ -1,0 +1,19 @@
+<% layout("/layouts/boilerplate") %>
+
+<h2 style="text-align: center; margin-bottom: 50px;">All Items</h2>
+
+<div class="Item_container">
+<% for(let list of listings){ %>
+            <div class="Item_card">
+                <img src="<%= list.image %>" alt="Card Image" class="card-img">
+                <div class="card-content">
+                    <h2 class="card-title"><%= list.name %></h2>
+                    <p class="card-text"><%= list.desc %></p>
+                    <p class="card-text">Qty - &nbsp;<%= list.quantity %></p>
+                    <p class="card-text"><i class="fa-solid fa-indian-rupee-sign"></i> <%= list.price %></p>
+                    <p class="card-text"><i class="fa-solid fa-clock"></i><%= list.date.toLocaleString(); %> </p>
+                    <a href="/farmer/<%= list.owner %>/information" class="btn btn-primary mt-3 Contact_btn">Contact</a>
+                </div>
+            </div>
+        <% } %>
+</div>

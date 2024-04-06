@@ -1,0 +1,67 @@
+<% layout("/layouts/boilerplate") %>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-size: 16px; /* Default font size */
+    }
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2em; /* 2 times the default font size */
+      margin-bottom: 40px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 1.2em; /* 1.1 times the default font size */
+      
+    }
+    img {
+      float: left;
+      margin-right: 50px;
+      max-width: 40%;
+      height: auto;
+    }
+    @media only screen and (max-width: 768px) {
+      img {
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+        max-width: 100%;
+      }
+      .container {
+        width: 90%;
+      }
+      h1 {
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+        text-align: center;
+      }
+      p {
+        font-size: 1em; /* Adjusted font size for smaller screens */
+      }
+    }
+  </style>
+
+  <div class="container">
+    <div>
+        <img src="/image/About2.jpeg.jpg" alt="About Us Image">
+    </div>
+      <div>
+        <h1>About Us</h1>
+        <p>Welcome to the Farmer Portal, your ultimate destination for all things agriculture! We are committed to empowering farmers worldwide by providing a comprehensive platform tailored to meet their unique needs and challenges. Whether you're a seasoned farmer or just starting out, our goal is to support you every step of the way on your agricultural journey.</p>
+        <p>At Farmer Portal, we understand the vital role that farmers play in sustaining our communities and nourishing the world. That's why we've created a user-friendly online hub packed with resources, tools, and information designed to help you succeed in today's dynamic agricultural landscape.</p>
+    </div>
+  </div>

@@ -1,0 +1,92 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="form_container">
+        <p class="title">Register</p>
+        <form class="form" method="post"  action="/signup" >
+            <div class="input-group">
+                <select name="role" class="form-select" aria-label="Default select example">
+                    <option selected>Select role</option>
+                    <option value="farmer">Farmer</option>
+                    <option value="broker">Broker</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="market">Market</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="username">Your Name</label>
+                <input type="text" name="name" id="username" placeholder="Enter your name">
+            </div>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter username">
+            </div>
+            <div class="input-group">
+                <label for="username">Emailid</label>
+                <input type="text" name="email" id="username" placeholder="Enter emailid">
+            </div>
+            <div class="input-group">
+                <label for="username">Phone no</label>
+                <input type="text" name="phone" id="username" placeholder="Enter phone no">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select class="form-control" name = "state" id="inputState" style="width: 22rem;">
+                                    <option value="SelectState">Select State</option>
+                                    <option value="Andra Pradesh">Andra Pradesh</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madya Pradesh">Madya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Orissa">Orissa</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttaranchal">Uttaranchal</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option disabled style="background-color:#aaa; color:#fff">UNION Territories</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadeep">Lakshadeep</option>
+                                    <option value="Pondicherry">Pondicherry</option>
+                                  </select>
+              </div>
+              <div class="input-group">
+                <label for="distric">Enter distric</label>
+                <input type="text" name="dist" id="username" placeholder="Enter distric">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="create password">
+                <div class="forgot">
+                    <a rel="noopener noreferrer" href="#">Forgot Password ?</a>
+                </div>
+            </div>
+            <button class="sign">Sign in</button>
+        </form>
+        
+        <p class="signup mt-3">Already have an account?
+            <a rel="noopener noreferrer" href="/login" class="">Login</a>
+        </p>
+    </div>
+                                                                                                                                     

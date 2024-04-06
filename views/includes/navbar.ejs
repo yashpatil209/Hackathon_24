@@ -1,0 +1,49 @@
+<!--========== SCROLL TOP ==========-->
+<a href="#" class="scrolltop" id="scroll-top">
+  <i class='bx bx-chevron-up scrolltop__icon'></i>
+</a>
+
+<!--========== HEADER ==========-->
+<header class="l-header" id="header">
+  <nav class="nav bd-container">
+    <a href="" class="nav__logo" style="font-size: 25px;">Krushi mitra</a>
+
+    <div class="nav__menu" id="nav-menu">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="/about" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="/farmer/items" class="nav__link">Product</a></li>
+        <li class="nav__item"><a href="/farmer/market" class="nav__link">Markets</a></li>
+        <li class="nav__item"><a href="/farmer/hotels" class="nav__link">Hotels</a></li>
+        <li class="nav__item"><a href="/farmer/brokers" class="nav__link">Broker</a></li>
+        <li class="nav__item"><a href="/contactUs" class="nav__link">Contact us</a></li>
+
+        <% if(!currUser){ %>
+        <li class="nav__item"><a href="/login" class="nav__link" >Login</a></li>
+        <% } %>
+
+        <% if(currUser){ %>
+        <a class="nav-link  active" href="/login" id="accountDropdown" style="margin:0 20px; font-size: 20px;" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fa-solid fa-user"></i>
+        </a>
+        <% } %>
+
+        <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="accountDropdown">
+          <% if(currUser){ %>
+            <% if(currUser.role == "farmer") { %>
+              <li><a class="dropdown-item" href="/dash/<%= currUser._id %>">Dashboard</a></li>
+            <% } %>
+            <% if(currUser.role == "market") { %>
+              <li><a class="dropdown-item" href="/farmer/market/<%= currUser._id %>">Dashboard</a></li>
+            <% } %>
+          <li><a class="dropdown-item" href="/logout">Logout</a></li>
+        </ul>
+        <% } %>
+      </ul>
+    </div>
+
+    <div class="nav__toggle" id="nav-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </nav>
+</header>
